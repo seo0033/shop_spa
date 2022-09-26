@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "제품 이름 01",
+        "des": "제품 설명 01 입니다.",
+        "img": "/assests/images/main_m01.jpg",
+        "color": [
+            "#f00",
+            "#0f0",
+            "#00f"
+        ],
+        "price": 1000
+    },
+    {
+        "id": 2,
+        "name": "제품 이름 02",
+        "des": "제품 설명 02 입니다.",
+        "img": "/assests/images/main_m02.jpg",
+        "color": [
+            "#f0f",
+            "#ff0",
+            "#0ff",
+            "#0f0"
+        ],
+        "price": 2000
+    },
+    {
+        "id": 3,
+        "name": "제품 이름 03",
+        "des": "제품 설명 03 입니다.",
+        "img": "/assests/images/main_m03.jpg",
+        "color": [
+            "#369",
+            "#200",
+            "#150"
+        ],
+        "price": 3000
+    }
+]

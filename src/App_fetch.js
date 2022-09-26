@@ -2,27 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import Detail from './pages/Detail'
 import Header from './pages/Header'
-import axios from 'axios'
 
 const App = () => {
     const [con, setCon] = useState();
     const [loading, setLoading] = useState(false);
-    const url = process.env.PUBLIC_URL + '/data.json';
-
+    
     useEffect(() => {
-        setLoading(false);
-        const getData = async () => {
-            const res = await axios.get(url);
-            setCon(res.data);
-            setLoading(true)
-        }
-        getData();
-        // axios(url).then(res => {
-        //     console.log(res)
-        //     setCon(res.data);
-        //     setLoading(true)
-        // })
-        //axios : 자동으로 .json파일로 바꿔줌
+        setLoading(false)
+        fetch(process.env.PUBLIC_URL + '/data.json')
+            .then(res => res.json())
+            .then(res => {
+                setCon(res);
+                setLoading(true)
+            })//data.json 을 배열로 가져온다음(then) console에 찍어라
     }, [])
 
     return (
